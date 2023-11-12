@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DirectivasPipesComponent } from './ejemplos/directivas-pipes/directivas-pipes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { DirectivasPipesComponent } from './ejemplos/directivas-pipes/directivas
     DirectivasPipesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
