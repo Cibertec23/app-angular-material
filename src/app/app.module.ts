@@ -9,6 +9,7 @@ import { PrincipalComponent } from './ejemplos/principal/principal.component';
 import { PaginaErrorComponent } from './ejemplos/pagina-error/pagina-error.component';
 import { MaterialModule } from './angular-material/material/material.module';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,14 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {path: 'principal', component: PrincipalComponent},
+      {path: 'angularmaterial', component: AmDemoComponent},
+      {path: 'directivas-pipes', component: DirectivasPipesComponent},
+      {path: '', redirectTo:'principal', pathMatch: 'full'},
+      {path: '**', component: PaginaErrorComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
